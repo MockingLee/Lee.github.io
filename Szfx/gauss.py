@@ -2,7 +2,7 @@ import numpy
 
 
 def gauss():
-    dimension = 6
+    dimension = 10
 
     a = numpy.zeros((dimension, dimension), dtype=float)
     for i in range(0, dimension):

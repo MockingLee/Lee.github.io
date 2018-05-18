@@ -1,6 +1,6 @@
 import numpy
 
-dimension = 6
+dimension = 100
 
 a = numpy.zeros((dimension, dimension), dtype=float)
 for i in range(0, dimension):
@@ -14,6 +14,7 @@ youbian = numpy.zeros((1, dimension), dtype=float)
 youbian = numpy.sum(a,1)
 
 zg = numpy.column_stack((a,youbian))
+
 
 
 for i in range(0,dimension-1):
@@ -30,7 +31,7 @@ dsyb = 0
 
 for i in range(0,dimension):
     current = dimension - 1 - i
-    dsyb = zg[current][6]
+    dsyb = zg[current][dimension]
     for j in range(0,dimension):
         if j != current:
             dsyb -= zg[current][j]
